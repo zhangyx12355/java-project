@@ -26,6 +26,7 @@ public class App {
                 String first_name = resultSet.getString(2);
                 System.out.println(last_name + "," + first_name);
                 System.out.println("test");
+                System.out.println("test2");
             }
         }
     }
