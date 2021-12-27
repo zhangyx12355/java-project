@@ -13,20 +13,19 @@ public class App {
                     "root", "123456");
             System.out.println(conn);
         } catch (Exception e) {
-            System.err.println(e);
+            e.printStackTrace();
         }
         String sql = "SELECT last_name, first_name FROM employees WHERE employee_id % 2 = 0";
-        ResultSet resultSet = null;
+        ResultSet resultSet;
         if (conn != null) {
             resultSet = conn.prepareStatement(sql).executeQuery();
-        }
-        if (resultSet != null) {
+            for (int i = resultSet.getMetaData().getColumnCount(); i > 0; i--)
+                System.out.printf("%-10s ", resultSet.getMetaData().getColumnName(i));
+            System.out.println();
             while (resultSet.next()) {
                 String last_name = resultSet.getString(1);
                 String first_name = resultSet.getString(2);
-                System.out.println(last_name + "," + first_name);
-                System.out.println("test");
-                System.out.println("   ");
+                System.out.printf("%-10s %-10s \n", last_name, first_name);
             }
         }
     }
