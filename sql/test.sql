@@ -1,4 +1,4 @@
-SELECT '?��??',employee_id,last_name
+SELECT '尚硅谷',employee_id,last_name
   FROM employees;
 
 DESC `order`;
@@ -29,10 +29,10 @@ SELECT last_name, first_name FROM employees WHERE employee_id % 2 = 0;
 
 SELECT NULL = NULL FROM DUAL;
 
-#???????
+#无返回结果
 SELECT * FROM employees WHERE commission_pct = NULL;
 
-# ???????(NULL <=> NULL ????1)
+# 安全等与(NULL <=> NULL 结果为1)
 SELECT * FROM employees WHERE commission_pct <=> NULL;
 
 SELECT * FROM employees WHERE commission_pct IS NOT NULL;
@@ -47,7 +47,7 @@ SELECT last_name,salary,commission_pct FROM employees WHERE commission_pct IS NU
 
 SELECT last_name,salary,commission_pct FROM employees WHERE commission_pct IS NOT NULL;
 
--- "<=>NULL" "ISNULL()"" "IS NULL" ???;
+-- "<=>NULL" "ISNULL()"" "IS NULL" 相同;
 SELECT last_name,salary,commission_pct FROM employees WHERE ISNULL(commission_pct);
 
 SELECT LEAST('g' ,'b ','t','m'),GREATEST('g','b','t','m') FROM DUAL;
@@ -58,7 +58,9 @@ SELECT employee_id,last_name,salary FROM employees WHERE salary BETWEEN 6000 and
 
 SELECT first_name,last_name,department_id FROM employees WHERE department_id IN (10,20,30);
 
--- "_"?????????????????"%"??????????????
+-- "_"代表一个不确定字符，"%"代表多个任意字符
 SELECT first_name,last_name FROM employees WHERE last_name LIKE '%a%' AND last_name LIKE '%e%';
 
 SELECT LEAST(first_name ,last_name) AS first_name from employees;
+
+
