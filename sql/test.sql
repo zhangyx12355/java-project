@@ -62,3 +62,5 @@ SELECT first_name,last_name,department_id FROM employees WHERE department_id IN 
 SELECT first_name,last_name FROM employees WHERE last_name LIKE '%a%' AND last_name LIKE '%e%';
 
 SELECT LEAST(first_name ,last_name) AS first_name from employees;
+
+
