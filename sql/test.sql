@@ -7,6 +7,7 @@ SELECT * FROM employees WHERE department_id = 90;
 
 SELECT * FROM employees WHERE last_name = 'King';
 
+##练习3
 #1
 SELECT employee_id , last_name , (salary + IFNULL(commission_pct,0)) * 12 "ANNAL" FROM employees;
 
@@ -63,4 +64,24 @@ SELECT first_name,last_name FROM employees WHERE last_name LIKE '%a%' AND last_n
 
 SELECT LEAST(first_name ,last_name) AS first_name from employees;
 
-
+## 练习4
+#1
+SELECT first_name,last_name,salary FROM employees WHERE salary NOT BETWEEN 5000 AND 12000;
+#2
+# SELECT last_name,department_id FROM employees WHERE department_id = 20 || department_id = 80;
+SELECT last_name,department_id FROM employees WHERE department_id IN (20,80);
+#3
+SELECT last_name,job_id FROM employees WHERE manager_id IS NULL;
+#4
+SELECT last_name,salary,commission_pct FROM employees WHERE commission_pct IS NOT NULL;
+#5
+SELECT first_name,last_name FROM employees WHERE  first_name LIKE '__a%';
+#6
+SELECT first_name,last_name FROM employees WHERE first_name LIKE '%a%' AND first_name LIKE '%k%';
+#7
+SELECT first_name,last_name FROM employees WHERE first_name LIKE '%e';
+#8
+SELECT last_name,job_id,department_id FROM employees WHERE department_id BETWEEN 80 AND 100;
+#9
+SELECT last_name,salary,manager_id FROM employees WHERE manager_id = 100 ||manager_id = 101 ||manager_id =110;
+SELECT last_name,salary,manager_id FROM employees WHERE manager_id IN (100,101,110);

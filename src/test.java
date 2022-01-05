@@ -10,6 +10,9 @@ public class test {
         for (int i : array) {
             System.out.println(i);
         }
+        String name = "password";
+        name.indexOf("s");
+
         
     }
 }
