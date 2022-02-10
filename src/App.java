@@ -15,9 +15,12 @@ public class App {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        String sql = "SELECT last_name, first_name FROM employees WHERE employee_id % 2 = 0";
+        int i1 = 2;
+        String sql = "SELECT last_name, first_name FROM employees WHERE employee_id % 2 = 1 limit "+ i1 +" ";
+
         ResultSet resultSet;
         if (conn != null) {
+
             resultSet = conn.prepareStatement(sql).executeQuery();
             for (int i = resultSet.getMetaData().getColumnCount(); i > 0; i--)
                 System.out.printf("%-10s ", resultSet.getMetaData().getColumnName(i));

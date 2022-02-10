@@ -11,8 +11,6 @@ public class test {
             System.out.println(i);
         }
         String name = "password";
-        name.indexOf("s");
-
-        
+        name.indexOf("s");  
     }
 }
