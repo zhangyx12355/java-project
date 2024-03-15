@@ -9,7 +9,7 @@
             <title>Version 3.0.0</title>
             <sparkle:releaseNotesLink>http://yourapp.com/releases/3_0_0.html</sparkle:releaseNotesLink>
             <pubDate>Fri, 25 Dec 2022 00:00:00 +0000</pubDate>
-            <enclosure url="http://127.0.0.1:5500/fluentdemo_boxed.exe" 
+            <enclosure url="https://github.com/zhangyx12355/java-project/releases/download/11111/fluentdemo_boxed.exe" 
                       sparkle:version="6.0.0" 
                       type="application/octet-stream" 
                       sparkle:os="windows" />
