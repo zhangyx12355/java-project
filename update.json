@@ -1,0 +1,11 @@
+{
+  "updates": {
+    "windows": {
+      "open-url": "",
+      "latest-version": "4.0",
+      "download-url": "https://github.com/zhangyx12355/java-project/releases/download/11111/fluentdemo_boxed.exe",
+      "changelog": "This is an example changelog for Windows. Go on...",
+      "mandatory": true
+    }
+  }
+}
