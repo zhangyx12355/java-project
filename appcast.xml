@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Your App Changelog</title>
+        <link>http://yourapp.com/</link>
+        <description>Most recent changes with links to updates.</description>
+        <language>en</language>
+        <item>
+            <title>Version 3.0.0</title>
+            <sparkle:releaseNotesLink>http://yourapp.com/releases/3_0_0.html</sparkle:releaseNotesLink>
+            <pubDate>Fri, 25 Dec 2022 00:00:00 +0000</pubDate>
+            <enclosure url="http://127.0.0.1:5500/fluentdemo_boxed.exe" 
+                      sparkle:version="6.0.0" 
+                      type="application/octet-stream" 
+                      sparkle:os="windows" />
+        </item>
+    </channel>
+</rss>
